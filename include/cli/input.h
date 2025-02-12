@@ -26,6 +26,6 @@ int lire_entier(int min, int max, const char* message);
  * @param message Le message de confirmation
  * @return 1 si confirmé, 0 sinon
  */
-int confirmer_action(const char* message);
+// int confirmer_action(const char* message);
 
 #endif // CLI_INPUT_H 

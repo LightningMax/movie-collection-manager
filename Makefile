@@ -19,6 +19,7 @@ endif
 
 # Liste explicite des fichiers source
 SOURCES = $(SRC_DIR)/list.c \
+          $(SRC_DIR)/film.c \
           $(SRC_DIR)/file/reader.c \
           $(SRC_DIR)/file/writer.c \
 		  $(SRC_DIR)/cli/menu.c \

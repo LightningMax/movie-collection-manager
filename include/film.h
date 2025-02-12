@@ -10,7 +10,7 @@
  * @param note Nouvel note
  * @return Code d'erreur
  */
-film_error_t modifierFilm(film_t* film, const char* title, int note);
+// film_error_t modifierFilm(film_t* film, const char* title, int note);
 
 /**
  * @brief Valide les informations d'un film

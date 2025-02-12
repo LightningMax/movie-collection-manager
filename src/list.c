@@ -36,3 +36,31 @@ film_error_t ajouterFilmDansListe(film_t** liste, const char* title, int note) {
     *liste = nouvelFilm;
     return FILM_SUCCESS;
 }
+
+film_error_t libererListe(film_t** liste) {
+    if (liste == NULL) {
+        return FILM_ERROR_NULL_POINTER;
+    }
+
+    film_t* courant = *liste;
+    while (courant != NULL) {
+        film_t* suivant = courant->next;
+        free(courant);
+        courant = suivant;
+    }
+
+    *liste = NULL;
+    return FILM_SUCCESS;
+}
+
+int compterElements(const film_t* liste) {
+    int compteur = 0;
+    const film_t* courant = liste;
+    
+    while (courant != NULL) {
+        compteur++;
+        courant = courant->next;
+    }
+    
+    return compteur;
+} 

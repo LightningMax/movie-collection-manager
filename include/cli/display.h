@@ -40,6 +40,6 @@ void afficher_succes(const char* message);
  * @param page La page courante
  * @return Le nombre total de pages
  */
-int afficher_liste_paginee(const Film* liste, int page);
+int afficher_liste_paginee(const film_t* liste, int page);
 
 #endif // CLI_DISPLAY_H 

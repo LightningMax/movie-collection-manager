@@ -20,6 +20,6 @@ typedef enum {
  * @brief Lance la boucle principale du menu
  * @param liste Pointeur vers la liste de Films
  */
-void boucle_principale(Film** liste);
+void boucle_principale(film_t** liste);
 
 #endif // CLI_MENU_H 
