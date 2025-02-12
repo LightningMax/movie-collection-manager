@@ -15,7 +15,7 @@ typedef enum {
     FILM_ERROR_FILE_READ,        // Erreur de lecture fichier
     FILM_ERROR_FILE_WRITE,       // Erreur d'écriture fichier
     FILM_ERROR_FILE_FORMAT       // Format de fichier invalide
-} FilmError;
+} film_error_t;
 
 /**
  * @brief Structure représentant un Film

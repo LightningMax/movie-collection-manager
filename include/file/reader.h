@@ -6,7 +6,7 @@
 /**
  * @brief Opérations de lecture de fichiers
  */
-FilmError chargerListeFilms(const char* filename, Film** liste);
-FilmError rechercherFilmDansFichier(const char* filename, const char* id, Film* user);
+film_error_t chargerListeFilms(const char* filename, Film** liste);
+film_error_t rechercherFilmDansFichier(const char* filename, const char* id, Film* user);
 
 #endif // FILE_READER_H 

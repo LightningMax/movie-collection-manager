@@ -6,11 +6,11 @@
 /**
  * @brief Opérations sur la liste chaînée
  */
-FilmError ajouterFilmDansListe(Film** liste, const char* title, int note);
-FilmError trouverFilmDansListe(const Film* liste, const char* id, Film** resultat);
-FilmError supprimerFilmDansListe(Film** liste, const char* id);
-FilmError libererListe(Film** liste);
-FilmError afficherListe(const Film* liste);
-int compterElements(const Film* liste);
+film_error_t ajouterFilmDansListe(film_t** liste, const char* title, int note);
+film_error_t trouverFilmDansListe(const film_t* liste, const char* id, film_t** resultat);
+film_error_t supprimerFilmDansListe(film_t** liste, const char* id);
+film_error_t libererListe(film_t** liste);
+film_error_t afficherListe(const film_t* liste);
+int compterElements(const film_t* liste);
 
 #endif // LIST_H 
