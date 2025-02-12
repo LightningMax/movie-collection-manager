@@ -72,6 +72,23 @@ film_error_t libererListe(film_t** liste) {
     return FILM_SUCCESS;
 }
 
+film_error_t supprimerUserDansListe(film_t** liste, const char* id) {
+    if (liste == NULL || id == NULL) {
+        return FILM_ERROR_NULL_POINTER;
+    }
+
+    if (*liste == NULL) {
+        return FILM_ERROR_NOT_FOUND;
+    }
+
+    film_t* courant = *liste;
+    if (strcmp(courant->id, id) == 0) {
+        *liste = courant->next;
+        free(courant);
+        return FILM_SUCCESS;
+    }
+}
+
 int compterElements(const film_t* liste) {
     int compteur = 0;
     const film_t* courant = liste;

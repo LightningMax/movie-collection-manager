@@ -71,11 +71,22 @@ static void menu_rechercher(film_t **liste) {
     }
 }
 
+void menu_supprimer(film_t** liste) {
+    char* id[10];
+
+    printf("Entrez le nom du film\n");
+    if (!lire_chaine(id, sizeof(id), "Id: ")) return;
+
+    supprimerUserDansListe(liste, id);
+
+    printf("Film supprimé!");
+}
+
 void boucle_principale(film_t** liste) {
     int choix;
     do {
         afficher_menu();
-        choix = lire_entier(0, 9, "Votre choix: ");
+        choix = lire_entier(0, 5, "Votre choix: ");
         
         switch (choix) {
             case MENU_AJOUTER:
@@ -87,16 +98,12 @@ void boucle_principale(film_t** liste) {
             case MENU_RECHERCHER:
                 menu_rechercher(liste);
                 break;
-            // case MENU_AJOUTER_ALEATOIRE:
-            //     menu_ajouter_aleatoire(liste);
-            //     break;
+            case MENU_SUPPRIMER:
+                menu_supprimer(liste);
+                break;
             case MENU_AFFICHER:
                 menu_afficher(*liste);
                 break;
-            // // ... autres cas à implémenter
-            // case MENU_AIDE:
-            //     afficher_aide();
-            //     break;
         }
     } while (choix != MENU_QUITTER);
 } 

@@ -5,29 +5,12 @@
 void afficher_menu(void) {
     printf("\n%s=== GESTIONNAIRE DE FILMS ===%s\n", COLOR_BLUE, COLOR_RESET);
     printf("1. Ajouter un film\n");
-    // printf("2. Ajouter des utilisateurs aléatoires\n");
-    printf("3. Afficher les films\n");
-    printf("4. Rechercher un film\n");
-    // printf("5. Modifier un utilisateur\n");
-    // printf("6. Supprimer un utilisateur\n");
-    printf("7. Sauvegarder la liste\n");
-    // printf("8. Charger une liste\n");
-    // printf("9. Aide\n");
+    printf("2. Afficher les films\n");
+    printf("3. Rechercher un film\n");
+    printf("4. Supprimer un film\n");
+    printf("5. Sauvegarder la liste\n");
     printf("0. Quitter\n\n");
 }
-
-// void afficher_aide(void) {
-//     printf("\n%s=== AIDE ===%s\n", COLOR_YELLOW, COLOR_RESET);
-//     printf("Ce programme permet de gérer une liste d'utilisateurs.\n");
-//     printf("Vous pouvez :\n");
-//     printf("- Ajouter des utilisateurs manuellement ou aléatoirement\n");
-//     printf("- Afficher la liste avec pagination\n");
-//     printf("- Rechercher par ID ou nom\n");
-//     printf("- Modifier ou supprimer des utilisateurs\n");
-//     printf("- Sauvegarder/charger la liste dans un fichier\n\n");
-//     printf("Appuyez sur Entrée pour continuer...");
-//     getchar();
-// }
 
 void afficher_erreur_cli(const char* message) {
     printf("%s%s%s\n", COLOR_RED, message, COLOR_RESET);
