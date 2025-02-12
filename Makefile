@@ -18,14 +18,12 @@ else
 endif
 
 # Liste explicite des fichiers source
-SOURCES = $(SRC_DIR)/user.c \
-          $(SRC_DIR)/list.c \
-          $(SRC_DIR)/error.c \
+SOURCES = $(SRC_DIR)/list.c \
           $(SRC_DIR)/file/reader.c \
           $(SRC_DIR)/file/writer.c \
-		  $(SRC_DIR)/cli/cli_menu.c \
-          $(SRC_DIR)/cli/cli_display.c \
-          $(SRC_DIR)/cli/cli_input.c \
+		  $(SRC_DIR)/cli/menu.c \
+          $(SRC_DIR)/cli/display.c \
+          $(SRC_DIR)/cli/input.c \
           main.c
 
 OBJECTS = $(SOURCES:%.c=$(OBJ_DIR)/%.o)
