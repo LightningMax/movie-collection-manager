@@ -4,13 +4,13 @@
 
 void afficher_menu(void) {
     printf("\n%s=== GESTIONNAIRE DE FILMS ===%s\n", COLOR_BLUE, COLOR_RESET);
-    printf("1. Ajouter un utilisateur\n");
+    printf("1. Ajouter un film\n");
     // printf("2. Ajouter des utilisateurs aléatoires\n");
-    // printf("3. Afficher les utilisateurs\n");
+    printf("3. Afficher les films\n");
     // printf("4. Rechercher un utilisateur\n");
     // printf("5. Modifier un utilisateur\n");
     // printf("6. Supprimer un utilisateur\n");
-    // printf("7. Sauvegarder la liste\n");
+    printf("7. Sauvegarder la liste\n");
     // printf("8. Charger une liste\n");
     // printf("9. Aide\n");
     printf("0. Quitter\n\n");

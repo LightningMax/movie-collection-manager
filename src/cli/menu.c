@@ -58,12 +58,15 @@ void boucle_principale(film_t** liste) {
             case MENU_AJOUTER:
                 menu_ajouter(liste);
                 break;
+            case MENU_SAUVEGARDER:
+                sauvegarderListeFilms(*liste, "film_db.csv");
+                break;
             // case MENU_AJOUTER_ALEATOIRE:
             //     menu_ajouter_aleatoire(liste);
             //     break;
-            // case MENU_AFFICHER:
-            //     menu_afficher(*liste);
-            //     break;
+            case MENU_AFFICHER:
+                menu_afficher(*liste);
+                break;
             // // ... autres cas à implémenter
             // case MENU_AIDE:
             //     afficher_aide();
