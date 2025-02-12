@@ -7,7 +7,7 @@ void afficher_menu(void) {
     printf("1. Ajouter un film\n");
     // printf("2. Ajouter des utilisateurs aléatoires\n");
     printf("3. Afficher les films\n");
-    // printf("4. Rechercher un utilisateur\n");
+    printf("4. Rechercher un film\n");
     // printf("5. Modifier un utilisateur\n");
     // printf("6. Supprimer un utilisateur\n");
     printf("7. Sauvegarder la liste\n");

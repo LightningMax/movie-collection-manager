@@ -1,2 +1,5 @@
 film_collection
 obj/
+*.csv
+*.txt
+*.json

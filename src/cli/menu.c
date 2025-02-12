@@ -4,6 +4,7 @@
 #include <cli_handler.h>
 #include "list.h"
 #include "file_handler.h"
+#include "types.h"
 
 static void menu_ajouter(film_t** liste) {
     char title[50];
@@ -48,6 +49,28 @@ static void menu_afficher(const film_t* liste) {
     } while (buffer[0] != 'Q' && buffer[0] != 'q');
 }
 
+static void menu_rechercher(film_t **liste) {
+    char title[50];
+
+    printf("\n=== Recherche dans le fichier ===\n");
+    printf("Entrez le nom du film: \n");
+    
+    if (!lire_chaine(title, sizeof(title), "Titre: ")) return;
+
+    film_t* film = NULL;
+    film_error_t erreur = trouverFilmDansListe(*liste, title, &film);
+    
+    if (erreur == FILM_SUCCESS) {
+        printf("\nFilm trouvé :\n");
+        printf("ID: %s, Titre: %s, Note: %d\n",
+               film->id,
+               film->title,
+               film->note);
+    } else {
+        printf("Erreur");
+    }
+}
+
 void boucle_principale(film_t** liste) {
     int choix;
     do {
@@ -60,6 +83,9 @@ void boucle_principale(film_t** liste) {
                 break;
             case MENU_SAUVEGARDER:
                 sauvegarderListeFilms(*liste, "film_db.csv");
+                break;
+            case MENU_RECHERCHER:
+                menu_rechercher(liste);
                 break;
             // case MENU_AJOUTER_ALEATOIRE:
             //     menu_ajouter_aleatoire(liste);

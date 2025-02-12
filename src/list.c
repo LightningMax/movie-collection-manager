@@ -37,6 +37,25 @@ film_error_t ajouterFilmDansListe(film_t** liste, const char* title, int note) {
     return FILM_SUCCESS;
 }
 
+film_error_t trouverFilmDansListe(const film_t* liste, const char* title, film_t** resultat) {
+    if (resultat == NULL || title == NULL) {
+        return FILM_ERROR_NULL_POINTER;
+    }
+
+    *resultat = NULL;
+    const film_t* courant = liste;
+    
+    while (courant != NULL) {
+        if (strcmp(courant->title, title) == 0) {
+            *resultat = (film_t*)courant;
+            return FILM_SUCCESS;
+        }
+        courant = courant->next;
+    }
+
+    return FILM_ERROR_NOT_FOUND;
+}
+
 film_error_t libererListe(film_t** liste) {
     if (liste == NULL) {
         return FILM_ERROR_NULL_POINTER;
